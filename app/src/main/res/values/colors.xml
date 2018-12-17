@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E21A21</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#32E21A21</color>
+    <color name="cbcNewsTextColorRed">#F00231</color>
+    <color name="cbcNewsTextColorSecondaryDark">#CBCBCB</color>
+    <color name="cbcNewsBackground">#EEEEEE</color>
+    <color name="cbcNewsGreyDark">#808080</color>
+</resources>

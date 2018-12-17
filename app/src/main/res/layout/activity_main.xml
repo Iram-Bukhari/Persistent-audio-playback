@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cbcNewsBackground"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.541"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <Button
+                    android:id="@+id/playAudioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Play Audio" />
+
+                <!-- A CardView that contains a TextView -->
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_withmedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                card_view:layout_constraintEnd_toEndOf="@+id/playAudioButton"
+
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="3"
+                            android:maxLines="3"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="20dp"
+                            android:paddingRight="10dp"
+                            android:text="Audio of Western Meadowlark"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvTitle"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/cbcNewsBackground"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:text="NEWS"
+                            android:textColor="@color/cbcNewsTextColorRed"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDateLastUpdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvTitle"
+                            android:layout_toRightOf="@+id/tvCategory"
+                            android:ellipsize="end"
+                            android:maxLines="1" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3">
+
+                        <ImageView
+                            android:id="@+id/ivHeadlineImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/placeholder_16x9" />
+
+                        <ImageView
+                            android:id="@+id/ivOverlay"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/buttonaudio" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+<!-- Cardview without media -->
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view_withoutmedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    card_view:layout_constraintEnd_toEndOf="@+id/playAudioButton"
+
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvTitle2"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="3"
+                                android:maxLines="3"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="20dp"
+                                android:paddingRight="10dp"
+                                android:text="Unprecedented treachery': Democratic Party sues Trump campaign, WikiLeaks and Russia"
+                                android:textColor="#000"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvCategory2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvTitle2"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/cbcNewsBackground"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="NEWS"
+                                android:textColor="@color/cbcNewsTextColorRed"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvDateLastUpdate2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvTitle2"
+                                android:layout_toRightOf="@+id/tvCategory2"
+                                android:ellipsize="end"
+                                android:maxLines="1" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3">
+
+                            <ImageView
+                                android:id="@+id/ivHeadlineImage2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/oregon_tax" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <!-- Cardview with video media-->
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view_withvideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    card_view:layout_constraintEnd_toEndOf="@+id/playAudioButton"
+
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/tvTitle3"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lines="3"
+                                android:maxLines="3"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="20dp"
+                                android:paddingRight="10dp"
+                                android:text="East Vancouver arson surveillance video"
+                                android:textColor="#000"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvCategory3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvTitle3"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@color/cbcNewsBackground"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="BRITISH COLUMBIA"
+                                android:textColor="@color/cbcNewsTextColorRed"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvDateLastUpdate3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvTitle3"
+                                android:layout_toRightOf="@+id/tvCategory3"
+                                android:ellipsize="end"
+                                android:maxLines="1" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".3">
+
+                            <ImageView
+                                android:id="@+id/ivHeadlineImage3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/placeholder_16x9" />
+
+                            <ImageView
+                                android:id="@+id/ivOverlay3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical|center_horizontal"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/buttonvideo" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+        >
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/design_bottom_sheet"
+        layout="@layout/bottomsheet"/>
+
+</android.support.design.widget.CoordinatorLayout>
